@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Data</string>
+    <string name="protocolo">http://</string>
+    <string name="host">api.backendless.com/</string>
+    <string name="version">v1/</string>
+    <string name="app_id_backendless">34A0B1F6-6E9C-F836-FF6F-D669BEA92500</string>
+    <string name="secret_key_backendless">2C62305A-D902-6CA7-FF9C-53E8E7938900</string>
+</resources>

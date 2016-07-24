@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.PrincipalActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        android:gravity="center">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/grey_200"
+        android:textSize="@dimen/size_sp_29"
+        android:fontFamily="sans-serif-condensed"
+        android:text="online"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/logo1" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/size_sp_29"
+        android:gravity="center"
+        android:text="studio"
+        android:alpha="0.6"
+
+        android:id="@+id/logo2" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_bienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_200"
+        android:textSize="@dimen/size_sp_26"
+        android:fontFamily="sans-serif-condensed"
+        android:text="¡Bienvenido a OSP!"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp" />
+
+    <EditText
+        android:id="@+id/et_correo"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:gravity="center"
+        android:text="rsantillanc@gmail.com"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/grey_050"
+        android:layout_below="@id/tv_bienvenido"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:id="@+id/bt_sesion"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:text="Sesion"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/et_correo"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/bt_sesion"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

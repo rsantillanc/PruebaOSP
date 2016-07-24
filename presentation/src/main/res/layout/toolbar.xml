@@ -1,0 +1,13 @@
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    app:theme="@style/Base.AppBarOverlay"
+    app:popupTheme="@style/Theme.Base.PopupOverlay"
+    app:titleTextAppearance="@style/ToolbarTitle"
+    app:subtitleTextAppearance="@style/ToolbarSubtitle"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+</android.support.v7.widget.Toolbar>
