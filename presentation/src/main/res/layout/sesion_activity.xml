@@ -35,7 +35,6 @@
         android:gravity="center"
         android:text="studio"
         android:alpha="0.6"
-
         android:id="@+id/logo2" />
     </LinearLayout>
 
