@@ -52,7 +52,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:fontFamily="sans-serif-condensed"
         android:layout_marginTop="15dp"
-        android:text="Renso Dantillal asd"
+        android:text="Renzo David"
         android:textColor="@color/grey_500"
         android:layout_below="@+id/iv_id"
         android:layout_centerHorizontal="true" />
