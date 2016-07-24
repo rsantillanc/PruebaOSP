@@ -9,8 +9,8 @@ import com.rsantillanc.domain.model.UsuarioModel;
 public interface SesionView extends MVPView {
     void autenticar(String correo);
     String obtenerCorreo();
-    void configurarCorreo();
     void configurarBotonInicioSesion();
+    void habilitarBotonInicioSesion(boolean si);
     void irActividadPrincipal(UsuarioModel usuarioModel);
     void animarLogo(boolean si);
     void animarBotonSesion(boolean si);

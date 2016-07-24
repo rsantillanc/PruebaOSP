@@ -32,6 +32,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.rsantillanc.domain.model.UsuarioModel;
 import com.rsantillanc.generic.Extra;
 import com.rsantillanc.generic.Navigator;
@@ -134,7 +136,6 @@ public class SesionActivity extends SuperActivity implements Inicializador, Sesi
     @Override
     public void configurarElementosUI() {
         configurarBotonInicioSesion();
-        configurarCorreo();
     }
 
     @Override
@@ -148,13 +149,13 @@ public class SesionActivity extends SuperActivity implements Inicializador, Sesi
     }
 
     @Override
-    public void configurarCorreo() {
-
+    public void configurarBotonInicioSesion() {
+        btSesion.setOnClickListener(v -> autenticar(obtenerCorreo()));
     }
 
     @Override
-    public void configurarBotonInicioSesion() {
-        btSesion.setOnClickListener(v -> autenticar(obtenerCorreo()));
+    public void habilitarBotonInicioSesion(boolean siNo) {
+        btSesion.setEnabled(siNo);
     }
 
     @Override
@@ -163,11 +164,10 @@ public class SesionActivity extends SuperActivity implements Inicializador, Sesi
     }
 
     //ANIMACIONES
-
     @Override
     public void animarLogo(boolean si) {
 
-        // 0 = iquierda (Online)
+        // 0 = izquierda (Online)
         Animation slideIn = AnimationUtils.loadAnimation(SesionActivity.this, R.anim.anim_right_in);
         logos.get(0).startAnimation(slideIn);
 
@@ -184,7 +184,7 @@ public class SesionActivity extends SuperActivity implements Inicializador, Sesi
 
     @Override
     public void animarError(boolean si) {
-
+        YoYo.with(Techniques.Shake).delay(800).duration(1250).playOn(etCorreo);
     }
 
     @NonNull
